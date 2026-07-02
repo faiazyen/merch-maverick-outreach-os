@@ -11,3 +11,4 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 .vercel
+.access-code.local
