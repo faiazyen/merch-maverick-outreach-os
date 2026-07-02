@@ -1,0 +1,13 @@
+# deps
+node_modules/
+# next
+.next/
+out/
+# env — never commit keys
+.env
+.env*.local
+# misc
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.vercel

@@ -1,0 +1,28 @@
+{
+  "name": "merch-maverick-outreach-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Outreach Operating System for Merch Maverick — AI-powered lead pipeline, scoring, and personal outreach queue.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "lucide-react": "^0.469.0",
+    "next": "^15.4.6",
+    "nodemailer": "^6.9.16",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5"
+  }
+}
