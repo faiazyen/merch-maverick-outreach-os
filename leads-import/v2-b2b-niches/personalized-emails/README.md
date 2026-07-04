@@ -44,33 +44,33 @@ Consistent with how the existing 93/94 EU emails were handled: this batch requir
 ## Summary
 
 - **Total emails generated:** 1000
-- **Selection method:** From the same 8 enriched CSVs, excluded every row whose email already appeared in `batch1-top1000.csv` (713 unique emails, case-insensitive match), then deduped again within the batch 2 candidate pool itself (many multi-location businesses share one inbox across niches/files) and dropped one row with a malformed scraped email address. Remaining rows were split by `email_confidence` tier and sorted by rating descending, then review_count descending within each tier. `found_on_site` rows were taken first (742 available, all used), then the remainder was filled from `pattern_guessed_mx_verified` rows (258 used) to reach exactly 1000.
+- **Selection method:** From the same 8 enriched CSVs, excluded every row whose email already appeared in `batch1-top1000.csv` (713 unique emails, case-insensitive match), then deduped again within the batch 2 candidate pool itself (many multi-location businesses share one inbox across niches/files) and dropped one row with a malformed scraped email address. Remaining rows were split by `email_confidence` tier and sorted by rating descending, then review_count descending within each tier. `found_on_site` rows were taken first (741 available, all used), then the remainder was filled from `pattern_guessed_mx_verified` rows (259 used) to reach exactly 1000.
 - **Uses the same exact template system** (subject line pool, per-niche product rotation, free-value-offer rotation, opener/offer/CTA blocks) as batch 1, with rotation counters recomputed against batch 2's own row ordering (overall index and per-niche index within batch 2).
 
 ## Breakdown by niche
 
 | Niche | Count |
 |---|---|
-| sauna | 395 |
+| sauna | 394 |
 | pilates | 304 |
-| cold_plunge | 240 |
+| cold_plunge | 241 |
 | run_club | 61 |
 
 ## Breakdown by niche and region
 
 | Niche | US | EU |
 |---|---|---|
-| sauna | 142 | 253 |
+| sauna | 142 | 252 |
 | pilates | 151 | 153 |
 | run_club | 22 | 39 |
-| cold_plunge | 102 | 138 |
+| cold_plunge | 102 | 139 |
 
 ## Breakdown by email confidence tier
 
 | Tier | Count |
 |---|---|
-| found_on_site | 742 |
-| pattern_guessed_mx_verified | 258 |
+| found_on_site | 741 |
+| pattern_guessed_mx_verified | 259 |
 
 Every row carries an `email_confidence` column so guessed-tier emails stay visibly distinguishable from confirmed ones (also labeled per-entry in the Word doc as "Email confidence: found on site" or "Email confidence: pattern guessed").
 
